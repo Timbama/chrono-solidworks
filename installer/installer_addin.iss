@@ -151,8 +151,42 @@ begin
             mFoundSolidWorks := 1;
     end
 
-
-    
+// find 64 bit SW v.18:
+    if RegQueryStringValue(HKEY_LOCAL_MACHINE,
+                      'SOFTWARE\SolidWorks\SolidWorks 2018\Setup',
+                      'SolidWorks Folder',
+                      mallDirSolidWorks) then
+    begin
+            mPathSolidWorks := mallDirSolidWorks; 
+            mFoundSolidWorks := 1;
+    end
+    // find 64 bit SW v.19:
+    if RegQueryStringValue(HKEY_LOCAL_MACHINE,
+                      'SOFTWARE\SolidWorks\SolidWorks 2019\Setup',
+                      'SolidWorks Folder',
+                      mallDirSolidWorks) then
+    begin
+            mPathSolidWorks := mallDirSolidWorks; 
+            mFoundSolidWorks := 1;
+    end
+    // find 64 bit SW v.20:
+    if RegQueryStringValue(HKEY_LOCAL_MACHINE,
+                      'SOFTWARE\SolidWorks\SolidWorks 2020\Setup',
+                      'SolidWorks Folder',
+                      mallDirSolidWorks) then
+    begin
+            mPathSolidWorks := mallDirSolidWorks; 
+            mFoundSolidWorks := 1;
+    end
+    // find 64 bit SW v.21:
+    if RegQueryStringValue(HKEY_LOCAL_MACHINE,
+                      'SOFTWARE\SolidWorks\SolidWorks 2021\Setup',
+                      'SolidWorks Folder',
+                      mallDirSolidWorks) then
+    begin
+            mPathSolidWorks := mallDirSolidWorks; 
+            mFoundSolidWorks := 1;
+    end
   end 
   else
   begin
